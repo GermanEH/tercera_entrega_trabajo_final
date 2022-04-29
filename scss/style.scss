@@ -1,5 +1,4 @@
 
-
 /*# sourceMappingURL=style.css.map */
 * {
     padding:0;
@@ -10,22 +9,41 @@
 @import "tipografia";
 @import "colores";
 
+$espaciado-estandar:10px;
+$espaciado-doble:20px;
+$espaciado-mitad:5px;
+
+$borde:20px;
+$alto:10px;
+
+@mixin ancho {
+    width: $espaciado-estandar $espaciado-mitad $espaciado-estandar $espaciado-mitad;
+}
+@mixin back-hover {
+    background-size: $espaciado-estandar $espaciado-mitad $espaciado-estandar $espaciado-mitad;
+}
+
+$estilos: (
+    flexible: flex,
+    centrado:center,
+);
+    
+
 .centrar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: map-get($estilos,flexible);
+    justify-content: map-get($estilos,centrado);
+    align-items: map-get($estilos,centrado);
 }
 
 .columna {
-    display: flex; 
-    align-items: center;
+    @extend .centrar;
     flex-direction: column;
 }
 
 .mediano  {
-    border-radius: 30px;
-    width:200px;
-    height:300px;
+    border-radius: $borde;
+    width:$espaciado-estandar*20;
+    height:$espaciado-estandar*30;
         &:hover {
             transition: ease;
             transition-duration: 2s;
@@ -34,7 +52,8 @@
 }
 
 fieldset {
-    padding: 50px;
+    $espaciado2:40px;
+    padding: ($espaciado-doble)+$espaciado2;
 }
 
 /* Diseño Mobile */
@@ -47,15 +66,15 @@ fieldset {
             list-style-type: none;
                 li {
                     font-size: 20px;
-                    margin: 5px;
-                    padding: 10px;
-                    width: 10px 5px 10px 5px;
+                    margin: calc($espaciado-estandar / 2);
+                    padding: $espaciado-estandar * 2;
+                    @include ancho;
                         a {
                             color:brown;
                         }
                         &:hover {
                             background-color: aqua;
-                            border-radius: 20px;
+                            border-radius: $borde;
                         }
                 }
         }
@@ -65,18 +84,18 @@ fieldset {
         font-weight: bold;
             &:hover {
                 background-color:blueviolet;
-                background-size: 10px 5px 10px 5px;
-                border-radius: 20px;
-                padding:10px;
+                @include back-hover;
+                border-radius: $borde;
+                padding: $espaciado-doble;
             }
     }
 
     footer {
             img {
-                border-radius: 0px;
-                width:30px;
-                margin-left: 10px;
-                margin-right: 10px;
+                border-radius: $borde - 20px;
+                width:$espaciado-estandar*3;
+                margin-left: $espaciado-estandar;
+                margin-right: $espaciado-estandar;
         }
     }
 }
@@ -93,16 +112,16 @@ fieldset {
             list-style-type: none;
                 li {
                     font-size: 30px;
-                    margin: 5px;
-                    padding: 20px;
-                    width: 10px 5px 10px 5px;
+                    margin: calc($espaciado-estandar / 2);
+                    padding: $espaciado-mitad;
+                    @include ancho;
                         a {
-                            color:brown;
+                            color:brown; 
                             font-weight: bold;
                         }
                         &:hover {
                             background-color: aqua;
-                            border-radius: 20px;
+                            border-radius: $borde;
                         }
                 }
         }
@@ -112,18 +131,18 @@ fieldset {
         font-weight: bold;
             &:hover {
                 background-color:blueviolet;
-                background-size: 10px 5px 10px 5px;
-                border-radius: 20px;
-                padding:10px;
+                @include back-hover;
+                border-radius: $borde;
+                padding:$espaciado-estandar;
             }
     }
 
     footer {
             img {
-                border-radius: 0px;
-                width:30px;
-                margin-left: 10px;
-                margin-right: 10px;
+                border-radius: $borde - 10;
+                width: $espaciado-estandar * 3;
+                margin-left: $espaciado-estandar;
+                margin-right: $espaciado-estandar;
         }
     }
 }

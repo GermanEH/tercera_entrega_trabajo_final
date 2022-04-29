@@ -1,7 +1,14 @@
+$tipografia-general:'Gideon Roman';
+$tipografia-alternativa:'Ramaraja';
+
+$fuente-normal:1em;
+$fuente-pequena:0.5em;
+$fuente-grande:2em;
+
 h1 {
     margin: 30px 0px 15px;
     font-size: 90px;
-    font-family: 'Ramaraja';
+    font-family: 'Ramaraja'; 
     font-weight: bolder;
 }
 

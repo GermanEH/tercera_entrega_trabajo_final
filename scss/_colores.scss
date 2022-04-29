@@ -1,3 +1,19 @@
+$color_1: brown;
+$color_2: aqua;
+$color_3: blueviolet;
+
 body {
     background:linear-gradient(to bottom, rgb(222, 230, 233), rgb(95, 174, 219));
+}  
+
+nav u li a {
+    color:$color_1;
+}
+
+nav u li a:hover {
+    background-color:$color_2;
+}
+
+.boton_regreso_link:hover {
+    background-color:$color_3;
 }

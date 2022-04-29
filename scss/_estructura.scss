@@ -1,7 +1,7 @@
 /* Diseño Mobile */
 
 @media screen and (max-width:768px) {
-    .grid {
+    .grid { 
         display: grid;
         grid-template-columns: auto;
         grid-template-areas:
@@ -9,8 +9,10 @@
             "nav"
             "section"
             "encabezado"
+            "subtitulo_a"
             "producto1_imagen"
             "producto1_descripcion"
+            "subtitulo_b"
             "producto2_imagen"
             "producto2_descripcion"
             "boton_regreso"
@@ -33,6 +35,10 @@
         grid-area: encabezado;
     }
 
+    .subtitulo_a {
+        grid-area: subtitulo_a;
+    }
+
     .pantalon_imagen {
         grid-area: producto1_imagen;
     }
@@ -51,6 +57,10 @@
 
     .producto1_descripcion {
         grid-area: producto1_descripcion;
+    }
+
+    .subtitulo_b {
+        grid-area: subtitulo_b;
     }
 
     .formulario_1 {
@@ -96,13 +106,15 @@
     .grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 200px 150px 100px repeat(3, 1fr) 250px 100px;
+        grid-template-rows: 200px 150px 100px repeat(5, 1fr) 250px 100px;
         grid-template-areas:
             "header header header header"
             "nav nav nav nav"
             "section section section section"
             ".. encabezado encabezado .."
+            ".. subtitulo_a subtitulo_a .."
             ".. producto1_imagen producto1_descripcion .."
+            ".. subtitulo_b subtitulo_b .."
             ".. producto2_descripcion producto2_imagen .."
             ".. boton_regreso boton_regreso .."
             "footer footer footer footer";
@@ -118,6 +130,10 @@
 
     .section {
         grid-area: section;
+    }
+
+    .subtitulo_a {
+        grid-area: subtitulo_a;
     }
 
     .encabezado {
@@ -146,6 +162,10 @@
 
     .formulario_1 {
         grid-area:producto1_descripcion;
+    }
+
+    .subtitulo_b {
+        grid-area: subtitulo_b;
     }
 
     .chomba_imagen {

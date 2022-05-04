@@ -99,7 +99,7 @@
         grid-area: footer;
     }
 }
-
+ 
 /* Diseño Desktop */
 
 @media screen and (min-width:481px) {
@@ -111,6 +111,7 @@
             "header header header header"
             "nav nav nav nav"
             "section section section section"
+            ".. encabezado encabezado .."
             ".. encabezado encabezado .."
             ".. subtitulo_a subtitulo_a .."
             ".. producto1_imagen producto1_descripcion .."

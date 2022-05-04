@@ -5,6 +5,10 @@ $fuente-normal:1em;
 $fuente-pequena:0.5em;
 $fuente-grande:2em;
 
+html {
+    font-size: 100%;
+}
+
 h1 {
     margin: 30px 0px 15px;
     font-size: 90px;
@@ -20,6 +24,12 @@ h3 {
     line-height: 2;
     margin: 30px;
 }
+
+nav ul li, nav ul li a {
+                        font-weight: bold;
+}
+
+
 p {
     font-size: large;
     font-family: 'Gideon Roman';
